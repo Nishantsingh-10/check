@@ -6,5 +6,7 @@ jobs:
   testing-shell:
     runs-on: ubuntu-20.04
     steps: 
+    - uses: actions/checkout@v2
     - name: run shell script
-      run: sudo sh .github/workflows/scripts/kind.sh
+      run: |
+        sh .github/workflows/scripts/kind.sh
