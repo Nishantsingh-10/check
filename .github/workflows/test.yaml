@@ -10,3 +10,5 @@ jobs:
     - name: run shell script
       run: |
         sh .github/workflows/scripts/kind.sh
+      env:
+        ID: "abc"
