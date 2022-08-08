@@ -11,4 +11,4 @@ jobs:
       run: |
         sh .github/workflows/scripts/kind.sh
       env:
-       ID: ${{ secrets.TOKEN }}
+       ID: ${{ secrets.TOKENA }}
