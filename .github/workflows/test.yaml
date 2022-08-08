@@ -5,7 +5,6 @@ on:
 jobs:
   testing-shell:
     runs-on: ubuntu-20.04
-    steps:
-    - run: sudo apt-get update
+    steps: 
     - name: run shell script
-      run: sh .github/workflows/scripts/kind.sh
+      run: sudo sh .github/workflows/scripts/kind.sh
