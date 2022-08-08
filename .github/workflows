@@ -1,9 +1,0 @@
-name: learn-github-actions
-on:
-  push:
-    branches: [ main ]
-jobs:
-  testing-runner:
-    runs-on: runs-on: ubuntu-20.04
-    steps:
-      - run: sudo apt-get update
