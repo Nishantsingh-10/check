@@ -8,5 +8,4 @@ jobs:
     steps:
     - run: sudo apt-get update
     - name: run shell script
-      shell: |
-        sh .github/workflows/scripts/kind.sh
+      run: sh .github/workflows/scripts/kind.sh
