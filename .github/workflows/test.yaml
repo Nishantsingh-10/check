@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  testing-runner:
-    runs-on: runs-on: ubuntu-20.04
+  testing-shell:
+    runs-on: ubuntu-20.04
     steps:
       - run: sudo apt-get update
