@@ -12,3 +12,4 @@ jobs:
         sh .github/workflows/scripts/kind.sh
       env:
        ID: "${{ secrets.TOKEN }}"
+       USER: "${{ env.NISH }}"
