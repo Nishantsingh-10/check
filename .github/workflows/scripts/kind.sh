@@ -2,5 +2,5 @@
 
 echo "Hi"
 echo ${ID}
-echo ${USER}
+echo ${NISH}
 echo "done"
