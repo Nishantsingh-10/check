@@ -2,6 +2,14 @@ name: learn-github-actions
 on:
   push:
     branches: [ main ]
+    
+  workflow_dispatch:
+     inputs:
+        name:
+          default: nishant
+          
+env:
+  fname: ${{ github.event.inputs.name }}
 jobs:
   testing-shell:
     runs-on: ubuntu-20.04
