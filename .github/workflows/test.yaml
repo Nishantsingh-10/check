@@ -20,3 +20,4 @@ jobs:
         sh .github/workflows/scripts/kind.sh
       env:
        ID: ${{ secrets.TOKEN }}
+       fname: ${{ github.event.inputs.name }}
