@@ -6,10 +6,9 @@ on:
   workflow_dispatch:
      inputs:
         name:
+          required: true
           default: nishant
-          
-env:
-  fname: ${{ github.event.inputs.name }}
+        
 jobs:
   testing-shell:
     runs-on: ubuntu-20.04
