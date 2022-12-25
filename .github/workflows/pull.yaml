@@ -11,5 +11,5 @@ jobs:
     - name: Extract branch name
       run: |
         # Extract the branch name from the GITHUB_REF variable
-        branch_name=$(echo $GITHUB_REF | cut -d '/' )
+        branch_name=$(echo $GITHUB_REF | cut -d '/' -f *)
         echo "Branch name: $branch_name"
