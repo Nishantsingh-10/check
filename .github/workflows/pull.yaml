@@ -1,0 +1,13 @@
+name: My workflow
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Extract branch name
+      run: |
+        # Extract the branch name from the GITHUB_REF variable
+        branch_name=$(echo $GITHUB_REF | cut -d '/' -f 3)
+        echo "Branch name: $branch_name"
