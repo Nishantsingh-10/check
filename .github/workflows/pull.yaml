@@ -8,8 +8,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Print pull request branch
+      run: echo "Pull request branch:$GITHUB_HEAD_REF"
     - name: Extract branch name
       run: |
         # Extract the branch name from the GITHUB_REF variable
-        branch_name=$(echo $GITHUB_REF | cut -d '/' -f 3)
-        echo "Branch name: $branch_name"
+        branch_name1=$(echo $GITHUB_REF | cut -d '/' -f 1)
+        branch_name2=$(echo $GITHUB_REF | cut -d '/' -f 2)
+        branch_name3=$(echo $GITHUB_REF | cut -d '/' -f 3)
+        branch_name4=$(echo $GITHUB_REF | cut -d '/' -f 4)
+        branch_name5=$(echo $GITHUB_REF | cut -d '/' -f 5)
+        echo "Branch name: $branch_name1"
+        echo "Branch name: $branch_name2"
+        echo "Branch name: $branch_name3"
+        echo "Branch name: $branch_name4"
+        echo "Branch name: $branch_name5"
