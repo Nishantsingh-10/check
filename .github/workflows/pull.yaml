@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: checkout the repo
+      uses: actions/checkout@v3
+      with:
+         ref: $GITHUB_HEAD_REF
     - name: Print pull request branch
       run: echo "Pull request branch:$GITHUB_HEAD_REF"
     - name: Extract branch name
