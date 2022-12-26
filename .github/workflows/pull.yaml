@@ -16,7 +16,7 @@ jobs:
     - name: Print pull request branch
       run: echo "$GITHUB_HEAD_REF"
     - name: Print pull request branch
-      run: echo "branch_name"
+      run: echo "$branch_name"
       
     - name: checkout the repo
       uses: actions/checkout@v3
