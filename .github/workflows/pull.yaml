@@ -15,6 +15,7 @@ jobs:
       uses: actions/checkout@v3
       with:
          ref: $branch_name
+         token: ${{ secrets.TOKEN }}
     - name: Print pull request branch
       run: echo "Pull request branch:$GITHUB_HEAD_REF"
     - name: Extract branch name
