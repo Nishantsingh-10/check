@@ -9,15 +9,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: Print pull request branch
       run: branch_name=$(echo "Pull request branch:$GITHUB_HEAD_REF")
+
+    - name: Print pull request branch
+      run: echo "$GITHUB_HEAD_REF"
+    - name: Print pull request branch
+      run: echo "branch_name"
+      
     - name: checkout the repo
       uses: actions/checkout@v3
       with:
          ref: $branch_name
          token: ${{ secrets.TOKEN }}
-    - name: Print pull request branch
-      run: echo "Pull request branch:$GITHUB_HEAD_REF"
     - name: Extract branch name
       run: |
         # Extract the branch name from the GITHUB_REF variable
