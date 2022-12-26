@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Print pull request branch
-      run: branch_name=$(echo "Pull request branch:$GITHUB_HEAD_REF")
+      run: branch_name=$GITHUB_HEAD_REF
 
     - name: Print pull request branch
       run: echo "$GITHUB_HEAD_REF"
