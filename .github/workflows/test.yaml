@@ -4,10 +4,10 @@ on:
     branches: [ main ]
     
   workflow_dispatch:
-     inputs:
-        name:
-          required: true
-          default: nishant
+#      inputs:
+#         name:
+#           required: true
+#           default: nishant
 
 env:
    fname: ${{ github.event.inputs.name }}
@@ -16,9 +16,17 @@ jobs:
   testing-shell:
     runs-on: ubuntu-20.04
     steps: 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    
     - name: run shell script
+      id: files
       run: |
-        sh .github/workflows/scripts/kind.sh
-      env:
-       ID: ${{ secrets.TOKEN }}
+        ls -ltr
+    - name: Save step logs to file
+      run: |
+        echo "${{ steps.files.outputs.logs }}" > logs.txt
+        
+    - name: run shell script
+      id: files1
+      run: |
+        cat logs.txt
