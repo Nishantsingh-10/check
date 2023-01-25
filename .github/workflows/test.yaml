@@ -22,9 +22,10 @@ jobs:
       id: files
       run: |
         ls -ltr
+        
     - name: Save step logs to file
       run: |
-        echo "${{ steps.files.outputs.logs }}" > logs.txt
+         "${{ steps.files.outputs.logs }}" > logs.txt
         
     - name: run shell script
       id: files1
