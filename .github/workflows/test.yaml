@@ -57,3 +57,5 @@ jobs:
         echo "Logs for pipeline run $(date)" >> pipeline-logs.txt
         echo "-------------------" >> pipeline-logs.txt
         cat $GITHUB_ENV >> pipeline-logs.txt
+        ehco "pipeline logs is"
+        cat pipeline-logs.txt
