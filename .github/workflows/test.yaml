@@ -25,7 +25,15 @@ jobs:
         
     - name: Save step logs to file
       run: |
-         "${{ steps.files.outputs.logs }}" > logs.txt
+         "${{ github.run_id }}" > logs.txt
+     
+    - name: Download artifacts
+      uses: actions/download-artifact@v3
+      with:
+        #run_id: ${{ github.run_id }}
+        name: artifacts
+        path: logs.txt
+
         
     - name: run shell script
       id: files1
