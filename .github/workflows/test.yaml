@@ -33,6 +33,10 @@ jobs:
         #run_id: ${{ github.run_id }}
         name: artifacts
         path: logs.txt
+        
+    - name: jobid and runid print
+      run: |
+        echo "https://github.com/Nishantsingh-10/check/actions/runs/{{ github.run_id }}/jobs/${{ github.job_id }}"
 
     - name: Save step logs to file
       run: |
