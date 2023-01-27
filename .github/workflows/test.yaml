@@ -37,7 +37,7 @@ jobs:
     - name: jobid and runid print
       run: |
         echo "https://github.com/Nishantsingh-10/check/actions/runs/${{ github.run_id }}/jobs/${{ github.job_id }}"
-
+        echo "https://github.com/Nishantsingh-10/check/actions/runs/${{ github.run_id }}"
     - name: Save step logs to file
       run: |
          echo "${{ github.run_id }}" > logs.txt
