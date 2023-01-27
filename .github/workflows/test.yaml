@@ -28,7 +28,7 @@ jobs:
          echo "${{ github.run_id }}" > logs.txt
      
     - name: Download artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         #run_id: ${{ github.run_id }}
         name: artifacts
