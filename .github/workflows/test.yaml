@@ -51,3 +51,9 @@ jobs:
       id: files1
       run: |
         cat logs.txt
+        
+    - name: Save logs to a file
+      run: |
+        echo "Logs for pipeline run $(date)" >> pipeline-logs.txt
+        echo "-------------------" >> pipeline-logs.txt
+        cat $GITHUB_ENV >> pipeline-logs.txt
