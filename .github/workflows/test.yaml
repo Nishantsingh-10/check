@@ -19,9 +19,9 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: run shell script
-      id: files
       run: |
         ls -ltr
+      id: print_logs
         
     - name: Save step logs to file
       run: |
@@ -45,7 +45,7 @@ jobs:
       id: print_log
     
     - name: Print the logs
-      run: echo "Logs is ${{ steps.print_log.outputs.logs }}"
+      run: echo "Logs is ${{ steps.print_logs.outputs.logs }}"
         
     - name: run shell script
       id: files1
