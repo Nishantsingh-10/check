@@ -34,6 +34,18 @@ jobs:
         name: artifacts
         path: logs.txt
 
+    - name: Save step logs to file
+      run: |
+         echo "${{ github.run_id }}" > logs.txt
+         
+    - name: Print log
+      run: |
+        echo "This is a log message"
+        echo "::set-output name=logs::This is a log message"
+      id: print_log
+    
+    - name: Print the logs
+      run: echo "Logs is ${{ steps.print_log.outputs.logs }}"
         
     - name: run shell script
       id: files1
